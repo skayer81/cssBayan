@@ -1,0 +1,14 @@
+
+summary{
+    color: blue;
+}
+
+.bayan:hover summary{color: black;}
+
+details[open] summary{
+    color: black;
+}
+
+details:hover summary{
+    color: black;
+}
