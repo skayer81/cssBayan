@@ -1,14 +1,43 @@
 
-summary{
-    color: blue;
-}
+        .tab input,
+        .tab-content {
+            display: none;
+        }
+    
+        .tab {
+            font: 0.8rem/1.2 Arial, sans-serif;
+            border: 1px solid #e9eaec;
+            border-radius: 3px;
+            color: black;
+            margin-bottom: 10px;
+        }
+    
+        .tab-title {
+            padding: 10px;
+            display: block;
+            cursor: pointer;
+        }
+    
+        .tab-title::after {
+            content: '+';
+            float: right;
+        }
+    
+        .tab-content {
+            padding: 10px 20px;
+        }
+    
+        .tab :checked+.tab-title {
 
-.bayan:hover summary{color: black;}
-
-details[open] summary{
-    color: black;
-}
-
-details:hover summary{
-    color: black;
-}
+            border-radius: 3px 3px 0 0;
+            background-color: red;
+        }
+    
+        .tab :checked+.tab-title::after {
+            content: '−';
+        }
+    
+        .tab :checked~.tab-content {
+            display: block;
+        }
+        .tab :hover~.tab-content{display: block;}
